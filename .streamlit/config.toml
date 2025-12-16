@@ -2,12 +2,15 @@
 base="light"
 primaryColor="#0057B7"
 backgroundColor="#FFFFFF"
-secondaryBackgroundColor="#F3F6FB"
-textColor="#000000"
+secondaryBackgroundColor="#FFFFFF"
+textColor="#1E1E1E"
 font="sans serif"
 
 [client]
 toolbarMode="hidden"
 
 [server]
-enableXsrfProtection=false
+headless = true
+
+[browser]
+gatherUsageStats = false
