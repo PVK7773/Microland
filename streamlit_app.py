@@ -1,22 +1,23 @@
-
 import streamlit as st
 
 st.set_page_config(page_title="Microland HR Portal", layout="centered")
+
 st.image("static/microland_logo_full.png", width=200)
 
-st.title("Welcome to Microland HR Portal")
+st.title("Welcome to MICROLAND HR Portal")
+st.subheader("Login to access your documents and apply for leave")
 
-menu = st.sidebar.selectbox("Menu", ["Login", "Admin Dashboard"])
+# Simulated login logic
+username = st.text_input("Email")
+password = st.text_input("Password", type="password")
 
-if menu == "Login":
-    emp_id = st.text_input("Employee ID")
-    password = st.text_input("Password", type="password")
-    if st.button("Login"):
-        if emp_id == "ICON2135" and password == "alister123":
-            st.success("Login successful! Welcome Alister Dsouza.")
-        else:
-            st.error("Invalid credentials. Please try again.")
-
-elif menu == "Admin Dashboard":
-    st.subheader("Admin Panel")
-    st.write("Track leaves, approve documents, manage users...")
+if st.button("Login"):
+    if username == "alister.dsouza@microland.com" and password == "microland@123":
+        st.success("Welcome Alister Dsouza!")
+        st.markdown("### Your Documents")
+        st.write("📄 Offer Letter
+📄 Payslip - November 2025")
+        st.markdown("### Leave Application")
+        st.write("📝 Apply leave and track status here.")
+    else:
+        st.error("Invalid credentials")
