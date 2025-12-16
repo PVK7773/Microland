@@ -1,0 +1,57 @@
+/* Remove Streamlit default UI */
+#MainMenu {visibility: hidden;}
+header {visibility: hidden !important;}
+footer {visibility: hidden !important;}
+
+.stApp {
+    background-color: #FFFFFF !important;
+}
+
+/* Sidebar styling */
+section[data-testid="stSidebar"] {
+    background-color: #FFFFFF !important;
+    border-right: 1px solid #E6E6E6;
+    padding-top: 20px;
+}
+
+.sidebar-title {
+    font-size: 22px;
+    font-weight: 600;
+    margin-bottom: 20px;
+    color: #1E1E1E;
+}
+
+/* Dashboard Tiles */
+.tile {
+    background-color: white;
+    padding: 25px;
+    border-radius: 14px;
+    box-shadow: 0px 4px 14px rgba(0,0,0,0.08);
+    text-align: center;
+}
+
+.tile-label {
+    font-size: 16px;
+    color: #555;
+}
+
+.tile-number {
+    font-size: 34px;
+    font-weight: bold;
+    color: #0057B7;
+    margin-top: 8px;
+}
+
+/* Document Upload Box */
+.upload-box {
+    border: 2px dashed #4A90E2;
+    border-radius: 12px;
+    padding: 35px;
+    background-color: #F9FBFF;
+    text-align: center;
+}
+
+/* Table Styling */
+table {
+    background: white;
+}
