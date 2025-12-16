@@ -1,0 +1,13 @@
+[theme]
+base="light"
+primaryColor="#0057B7"
+backgroundColor="#FFFFFF"
+secondaryBackgroundColor="#F3F6FB"
+textColor="#000000"
+font="sans serif"
+
+[client]
+toolbarMode="hidden"
+
+[server]
+enableXsrfProtection=false
