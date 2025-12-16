@@ -1,0 +1,14 @@
+[
+    {
+        "name": "Alister Dsouza",
+        "email": "alister.dsouza@microland.com",
+        "password": "microland123",
+        "role": "employee"
+    },
+    {
+        "name": "Admin",
+        "email": "admin@microland.com",
+        "password": "admin123",
+        "role": "admin"
+    }
+]
