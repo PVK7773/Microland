@@ -1,12 +1,9 @@
 import streamlit as st
 import json
 
-# -------------------------
-# Page configuration
-# -------------------------
-st.set_page_config(layout="wide", page_title="Microland HR Portal")
+st.set_page_config(page_title="Microland HR Portal", layout="wide")
 
-# Load Custom CSS
+# Load CSS
 with open("static/styles.css") as css:
     st.markdown(f"<style>{css.read()}</style>", unsafe_allow_html=True)
 
@@ -29,40 +26,33 @@ def login_screen():
         unsafe_allow_html=True
     )
 
-    st.write("")
-    st.write("")
-
     email = st.text_input("Email Address")
     pwd = st.text_input("Password", type="password")
 
-    login_clicked = st.button("Login", use_container_width=True)
+    login_button = st.button("Login", use_container_width=True)
 
-    if login_clicked:
+    if login_button:
         if email in USERS and USERS[email]["password"] == pwd:
-            st.session_state.logged_in = True
-            st.session_state.user = USERS[email]
-            return True   # Rerun handled outside
+            st.session_state["logged_in"] = True
+            st.session_state["user"] = USERS[email]
         else:
             st.error("Invalid email or password")
-            return False
-
-    return False
 
 
 # -------------------------
-# INITIAL STATE
+# INITIAL SESSION STATE
 # -------------------------
 if "logged_in" not in st.session_state:
-    st.session_state.logged_in = False
+    st.session_state["logged_in"] = False
 
 
 # -------------------------
-# LOGIN FLOW CONTROL
+# PAGE ROUTING (NO RERUN)
 # -------------------------
-if not st.session_state.logged_in:
-    success = login_screen()
-    if success:
-        st.experimental_rerun()
+if not st.session_state["logged_in"]:
+    # Show login page
+    login_screen()
 
 else:
+    # Go to dashboard (safe redirect)
     st.switch_page("pages/1_Dashboard.py")
