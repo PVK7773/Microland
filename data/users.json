@@ -1,6 +1,7 @@
 {
-    "alister.dsouza@microland.com":{
-        "password":"microland123",
-        "name":"Alister Noel Dsouza"
+    "alister.dsouza@microland.com": {
+        "password": "microland123",
+        "name": "Alister Noel Dsouza",
+        "role": "Major Incident Manager"
     }
 }
