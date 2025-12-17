@@ -9,8 +9,5 @@ font="sans serif"
 [client]
 toolbarMode="hidden"
 
-[server]
-headless = true
-
 [browser]
 gatherUsageStats = false
