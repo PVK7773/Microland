@@ -15,7 +15,7 @@ def load_sidebar():
     choice = st.sidebar.radio("Navigation", list(pages.keys()))
 
     if choice == "🚪 Logout":
-        st.session_state.logged_in = False
+        st.session_state["logged_in"] = False
         st.experimental_rerun()
     elif choice != "📊 Dashboard":
         st.switch_page("pages/" + pages[choice])
