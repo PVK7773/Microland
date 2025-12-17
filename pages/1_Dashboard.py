@@ -1,7 +1,7 @@
 import streamlit as st
-from streamlit_app import sidebar
+from components.sidebar import load_sidebar
 
-sidebar()
+load_sidebar()
 
 user = st.session_state.get("user")
 
