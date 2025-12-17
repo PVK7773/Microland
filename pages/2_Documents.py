@@ -1,5 +1,6 @@
 import streamlit as st
-from streamlit_app import sidebar
+from components.sidebar import load_sidebar
+load_sidebar()
 import json
 
 sidebar()
