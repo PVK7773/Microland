@@ -1,9 +1,10 @@
 import streamlit as st
-from streamlit_app import sidebar
+from components.sidebar import load_sidebar
 
-sidebar()
+load_sidebar()
 
 st.title("HR Announcements")
 
-st.success("🎉 Salary revision cycle begins next month.")
-st.info("📢 Microland Townhall on Friday at 4 PM.")
+st.success("🎉 Annual appraisal cycle will begin next month.")
+st.info("📢 Microland Townhall scheduled for Friday at 4 PM.")
+st.warning("⚠️ Please update your personal information in the HR portal.")
