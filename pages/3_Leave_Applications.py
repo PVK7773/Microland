@@ -1,13 +1,13 @@
 import streamlit as st
-from streamlit_app import sidebar
+from components.sidebar import load_sidebar
 
-sidebar()
+load_sidebar()
 
 st.title("Leave Applications")
 
-leave_type = st.selectbox("Leave Type", ["Casual", "Sick", "Annual"])
-days = st.number_input("Days", 1, 30)
-reason = st.text_area("Reason")
+leave_type = st.selectbox("Leave Type", ["Casual Leave", "Sick Leave", "Annual Leave"])
+days = st.number_input("Number of Days", 1, 30)
+reason = st.text_area("Reason for Leave")
 
 if st.button("Submit Leave Request"):
-    st.success("Leave request submitted!")
+    st.success("Your leave request has been submitted!")
